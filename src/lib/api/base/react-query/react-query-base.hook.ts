@@ -11,6 +11,13 @@ import {
   QueryResponse,
 } from './react-query-base.type';
 
+/**
+ * Hook for executing a query with React Query and custom behavior.
+ * @template TQueryData - The type of data returned by the query.
+ * @template TSelectData - The type of data after the `select` transformation (optional, defaults to `TQueryData`).
+ * @param args - Configuration options for the query.
+ * @returns The query result and additional metadata.
+ */
 export const useAppQuery = <TQueryData, TSelectData = TQueryData>(
   args: QueryArgs<TQueryData, TSelectData>,
 ) => {
@@ -61,6 +68,13 @@ export const useAppQuery = <TQueryData, TSelectData = TQueryData>(
   return { isLoading, ...query };
 };
 
+/**
+ * Hook for executing a mutation with React Query and custom behavior.
+ * @template TData - The type of data returned by the mutation.
+ * @template TVariables - The type of variables passed to the mutation.
+ * @param args - Configuration options for the mutation.
+ * @returns The mutation result and additional metadata.
+ */
 export const useAppMutation = <TData, TVariables>(
   args: MutationArgs<TData, TVariables>,
 ) => {

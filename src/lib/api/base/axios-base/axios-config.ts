@@ -24,6 +24,12 @@ export class AxiosClient {
     );
   }
 
+  /**
+   * Sends a GET request to the specified URL.
+   * @param url - The URL to send the request to.
+   * @param config - Optional Axios request configuration.
+   * @returns A promise resolving to the Axios response.
+   */
   public async get<T = unknown>(
     url: string,
     config?: AxiosRequestConfig,
@@ -31,6 +37,13 @@ export class AxiosClient {
     return this.axiosInstance.get<T>(url, config);
   }
 
+  /**
+   * Sends a POST request to the specified URL.
+   * @param url - The URL to send the request to.
+   * @param data - Optional data to include in the request body.
+   * @param config - Optional Axios request configuration.
+   * @returns A promise resolving to the Axios response.
+   */
   public async post<T = unknown>(
     url: string,
     data?: unknown,
@@ -39,6 +52,13 @@ export class AxiosClient {
     return this.axiosInstance.post<T>(url, data, config);
   }
 
+  /**
+   * Sends a PUT request to the specified URL.
+   * @param url - The URL to send the request to.
+   * @param data - Optional data to include in the request body.
+   * @param config - Optional Axios request configuration.
+   * @returns A promise resolving to the Axios response.
+   */
   public async put<T = unknown>(
     url: string,
     data?: unknown,
@@ -47,6 +67,13 @@ export class AxiosClient {
     return this.axiosInstance.put<T>(url, data, config);
   }
 
+  /**
+   * Sends a PATCH request to the specified URL.
+   * @param url - The URL to send the request to.
+   * @param data - Optional data to include in the request body.
+   * @param config - Optional Axios request configuration.
+   * @returns A promise resolving to the Axios response.
+   */
   public async patch<T = unknown>(
     url: string,
     data?: unknown,
@@ -55,6 +82,12 @@ export class AxiosClient {
     return this.axiosInstance.patch<T>(url, data, config);
   }
 
+  /**
+   * Sends a DELETE request to the specified URL.
+   * @param url - The URL to send the request to.
+   * @param config - Optional Axios request configuration.
+   * @returns A promise resolving to the Axios response.
+   */
   public async delete<T = unknown>(
     url: string,
     config?: AxiosRequestConfig,
