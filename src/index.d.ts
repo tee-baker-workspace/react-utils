@@ -1,6 +1,11 @@
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 import { ApiUrlType } from './lib/api/base/api-urls/api-urls';
+import {
+  MutationArgs,
+  QueryArgs,
+  QueryErrorResponse,
+} from './lib/api/base/react-query/react-query-base.type';
 
 export {
   InfiniteQueryResponse,
