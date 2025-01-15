@@ -1,16 +1,17 @@
 {
-  "name": "react-utils",
+  "name": "@tee-baker/react-utils",
   "version": "1.0.0",
   "description": "React utilities for tee baker project",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "type": "commonjs",
-  "typings": "./src/index.d.ts",
+  "typings": "./dist/index.d.ts",
   "private": true,
   "author": "",
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
     "build": "tsc",
+    "prepare": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -49,5 +50,21 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
-  }
+  },
+  "files": [
+    "dist",
+    "src/**/*.d.ts",
+    "README.md "
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tee-baker-workspace/react-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tee-baker-workspace/react-utils/issues"
+  },
+  "homepage": "https://github.com/tee-baker-workspace/react-utils#readme"
 }

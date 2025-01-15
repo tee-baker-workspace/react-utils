@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
+    "target": "ES2015",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
@@ -12,8 +13,15 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "types": ["node"],
-    "allowSyntheticDefaultImports": true
+    "declaration": true,
+    "emitDeclarationOnly": false
   },
-  "include": ["src/**/*.ts", "src/index.js"],
-  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
+  "include": ["src/**/*.ts", "src/index.ts"],
+  "exclude": [
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "node_modules",
+    "dist"
+  ]
 }
